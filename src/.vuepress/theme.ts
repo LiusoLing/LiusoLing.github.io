@@ -9,7 +9,7 @@ export default hopeTheme({
   hostname: "https://mister-hope.github.io",
 
   author: {
-    name: "Mr.Hope",
+    name: "Hunter",
     url: "https://mister-hope.com",
   },
 
@@ -32,7 +32,7 @@ export default hopeTheme({
   displayFooter: true,
 
   blog: {
-    description: "一个前端开发者",
+    description: "一个后端Javaer",
     intro: "/intro.html",
     medias: {
       Baidu: "https://example.com",

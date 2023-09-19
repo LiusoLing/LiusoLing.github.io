@@ -10,13 +10,27 @@ export default sidebar({
       link: "demo/",
       children: "structure",
     },
-    {
-      text: "文章",
-      icon: "book",
-      prefix: "posts/",
-      children: "structure",
-    },
     "intro",
     "slides",
+  ],
+  "/javaer/": [
+    {
+      text: "开始之前",
+      icon: "book",
+      prefix: "",
+      link: "",
+      children: [
+        "windows",
+        "unix",
+        "ide",
+      ],
+    },
+    {
+      text: "Java指南",
+      icon: "book",
+      prefix: "base/",
+      link: "",
+      children: "structure",
+    },
   ],
 });
