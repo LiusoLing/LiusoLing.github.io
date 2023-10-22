@@ -11,7 +11,7 @@ category:
 
 - [Windows程序员生存指南](windows.md)
 
-- [macOS和Ubuntu程序员生存指南](unix.md)
+- [Unix程序员生存指南](unix.md)
 
 - [源代码编辑器和IDE](ide.md)
 
