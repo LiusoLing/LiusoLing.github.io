@@ -1,5 +1,36 @@
+# Node modules
+**/node_modules/**
 
-node_modules/
-src/.vuepress/.cache/
-src/.vuepress/.temp/
-src/.vuepress/dist/
+# Build files
+docs-shared/lib/
+packages/*/lib/
+
+# Vuepress Cache
+**/.vuepress/.cache/**
+# Vuepress Temp
+**/.vuepress/.temp/**
+# Vuepress Output
+dist/
+
+# npm config
+.npmrc
+
+# Typescript build info
+*.tsbuildinfo
+
+# Coverage Files
+coverage/
+
+# macOS
+.DS_Store
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### VS Code ###
+.vscode/
+*.log
+logs/
