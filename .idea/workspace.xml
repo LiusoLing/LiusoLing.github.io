@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b959bf1a-04ac-4312-94d5-8652fdd6dd98" name="更改" comment="feat: unix程序员须知指南">
+      <change afterPath="$PROJECT_DIR$/src/javaer/base/Java基础/1 base grammar.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javaer/base/java history.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/javaer/base/jdk install.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaer/base/1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaer/base/2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaer/base/3.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaer/base/4.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaer/base/test/t1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaer/unix.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaer/unix.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="dev" />
+                    <option name="lastUsedInstant" value="1700465631" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1700465630" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2X4Ge2rM4LUfCePNMhCPByGyuXb" />
+  <component name="ProjectViewState">
+    <option name="compactDirectories" value="true" />
+    <option name="flattenModules" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showModules" value="false" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/liusongling/ideaPro/sky-docs&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="b959bf1a-04ac-4312-94d5-8652fdd6dd98" name="更改" comment="" />
+      <created>1697881031115</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697881031115</updated>
+    </task>
+    <task id="LOCAL-00001" summary="feat: unix程序员须知指南">
+      <option name="closed" value="true" />
+      <created>1697944150059</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697944150059</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: unix程序员须知指南" />
+    <MESSAGE value="feat: 更新git忽略文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 更新git忽略文件" />
+  </component>
+</project>
