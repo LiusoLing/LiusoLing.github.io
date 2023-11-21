@@ -1,5 +1,5 @@
 ---
-title: Unix序员生存指南
+title: Unix程序员生存指南
 icon: fab fa-linux
 order: 2
 category:
@@ -24,8 +24,8 @@ tag:
 
 整个 Unix/macOS 的文件系统只有一个根目录。硬盘驱动器安装在根目录下的某个地方。
 文件通过目录和文件名来标识，例如`/usr/lib/jvm/jdk1.7.0_07/bin/javac`。
-前导`“/”`（正斜杠）表示根目录。
-子目录也用`“/”`分隔。
+前导`/`（正斜杠）表示根目录。
+子目录也用`/`分隔。
 
 ### 1.2 Home目录
 
@@ -35,38 +35,37 @@ tag:
 
 用户的主目录分配在 `/Users`（对于macOS）或 `/home`（对于Ubuntu）下，子目录名称与用户名相同，
 
-- macOS 中的 `/Users/peter`、`/Users/paul`;
+- macOS 中的 `/Users/peter`、`/Users/paul`
 - Ubuntu 中的 `/home/peter`、`/home/paul`。
 
 您的主目录（`/Users/<username>`）包含 Downloads、Documents 等子目录。
 
 它们的完整文件名分别是`/Users/<username>/Downloads`、`/Users/<username>/Documents`。
 
-您可以使用特殊符号“~”来表示您的主目录。
+您可以使用特殊符号~来表示您的主目录。
 换句话说，`~/Downloads` 与 `/Users/<username>/Downloads` 相同。
 
 ### 1.3 路径名和文件名
 
 要引用文件，您需要提供路径名（目录和子目录名称）和文件名。
 
-例如，在 `“/usr/lib/jvm/jdk1.7.0_07/bin/javac”` 中，
-- 路径名是 `“/usr/lib/jvm/jdk1.7.0_07/bin/”`，
-- 文件名是 `“javac”`。
+例如，在 `/usr/lib/jvm/jdk1.7.0_07/bin/javac` 中，
+- 路径名是 `/usr/lib/jvm/jdk1.7.0_07/bin/`，
+- 文件名是 `javac`。
 
 ::: tip
 可以通过两种方式指定路径名：
 - 绝对路径名：绝对路径从根目录开始。
-  也就是说，它以 `“/”` 开头，后跟所有子目录，用 `“/”` 分隔，指向文件，
-  - 例如 `“/usr/lib/jvm/jdk1.7.0_07/bin/”`。绝对路径也可以从当前用户的主目录开始（以 `“~"` 开头）， 
-  - 例如 `“~/Downloads/jdk/”` 与 macOS 中的 `“/Users/<yourname>/Downloads/jdk/”`相同。
-- 相对路径名：相对路径相对于所谓的当前工作目录，相对路径不以 `“/”` 或 `“~”` 开头。
-  - 例如，如果当前工作目录是`“/usr/lib/jvm/”`，那么相对路径名 `jdk1.7.0_07/bin/”指的是“/usr/lib/jvm/jdk1.7.0_07/bin/`
-
+  也就是说，它以 `/` 开头，后跟所有子目录，用 `/` 分隔，指向文件，
+  - 例如 `/usr/lib/jvm/jdk1.7.0_07/bin/`。绝对路径也可以从当前用户的主目录开始（以 `~` 开头）。
+  - 例如 `~/Downloads/jdk/` 与 macOS 中的 `/Users/<yourname>/Downloads/jdk/`相同。
+- 相对路径名：相对路径相对于所谓的当前工作目录，相对路径不以 `/` 或 `~` 开头。
+  - 例如，如果当前工作目录是`/usr/lib/jvm/`，那么相对路径名 `jdk1.7.0_07/bin/指的是/usr/lib/jvm/jdk1.7.0_07/bin/`。
 :::
 
 注意：Unix/macOS系统区分大小写，SKY和sky是不同的。
 
-## 二、命令行界面“Bash”
+## 二、命令行界面Bash
 
 程序员使用命令行界面（CLI）向操作系统（OS）发送文本命令，而不是单击图形用户界面（GUI）。
 
@@ -78,10 +77,10 @@ Ubuntu和macOS中的终端运行所谓的bash，它支持一组命令和实用�
 
 ::: tip
 可以通过以下方式启动终端：
-   - 在macOS中，查找应用程序“终端”，点击打开；
-   - 在Ubuntu中，在应用程序中查找“终端”，点击打开。
+   - 在macOS中，查找应用程序终端，点击打开；
+   - 在Ubuntu中，在应用程序中查找终端，点击打开。
 :::   
-终端显示一个以“$”结尾的提示符，形式为“Username@ComputerName:CurrentDirectory$”。
+终端显示一个以 `$` 结尾的提示符，形式为 `Username@ComputerName:CurrentDirectory$` 。
 
 ### 2.1 当前目录命令
 
@@ -91,15 +90,15 @@ Ubuntu和macOS中的终端运行所谓的bash，它支持一组命令和实用�
    /Users/liusongling
 ```
 
-当终端启动时，它将初始工作目录设置为当前登录用户的主目录（表示为“~”）。
+当终端启动时，它将初始工作目录设置为当前登录用户的主目录（表示为~）。
 
 ### 2.2 更改目录命令
 
-使用 cd 命令更改当前工作目录，发出命令 `“cd <new-pathname>”`。
+使用 cd 命令更改当前工作目录，发出命令 `cd <new-pathname>`。
 
 您可以通过两种方式指定new-pathname：绝对或相对。
 
-如前所述，绝对路径以`“/”`（根目录）或 `“~”`（主目录）开头；而相对路径相对于当前工作目录，不以 `“/”` 或 `“~”` 开头。
+如前所述，绝对路径以`/`（根目录）或 `~`（主目录）开头；而相对路径相对于当前工作目录，不以 `/` 或 `~` 开头。
 
 根（/）、主页（~）、父（…）、当前（.）上一个（-）目录
 
@@ -131,6 +130,7 @@ drwxr-xr-x 2 myuser myuser 1024 Mar 22 21:32 Downloads
 ```
 
 可以和通配符 * 搭配使用，列出选定的文件，它匹配0个或多个（任何）字符。例如，
+
 ```shell
 ls *.java     // List files ending with ".java" in short format (default)
 ls -l *.java  // List files ending with ".java" in long format
@@ -142,6 +142,7 @@ ls -ld my*    // List files and directories beginning with "my" in long format
 
 历史命令：使用向上/向下箭头键滚动浏览命令历史记录中的上一个/下一个命令；
 TAB自动完成：键入文件/目录名称的前几个字符，然后按TAB键自动完成文件/目录名称。反复按TAB键循环浏览所有匹配项；
+
 复制/粘贴：在macOS中：使用Cmd+C和Cmd+V；在Ubuntu中：使用Shift+Ctrl+C和Shift+Ctrl+V；
 移动光标：在CMD中，您不能使用鼠标指针来移动命令行光标。相反，您需要使用左/右箭头、退格键或删除键来移动命令行光标。
 
@@ -149,7 +150,7 @@ TAB自动完成：键入文件/目录名称的前几个字符，然后按TAB键�
 2）Backspace/Delete 键：删除光标下的上一个/当前字符；
 3）Esc 键：清除命令行。
 4）Home/End 键：移动到命令行的开始/结束。
-5）Ctrl+左/右-箭头键：向左/向右移动一个“单词”。
+5）Ctrl+左/右-箭头键：向左/向右移动一个单词。
 
 ## 三、Unix 提示和技巧
    【TODO待办】
