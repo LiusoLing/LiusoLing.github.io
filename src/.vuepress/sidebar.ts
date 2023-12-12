@@ -33,4 +33,38 @@ export default sidebar({
       children: "structure",
     },
   ],
+
+  "/database/mysql/": [
+    {
+      text: "MySQL学习",
+      icon: "book",
+      prefix: "learning/",
+      link: "",
+      children: "structure",
+    },
+    {
+      text: "MySQL实践",
+      icon: "book",
+      prefix: "use/",
+      link: "",
+      children: "structure",
+    },
+  ],
+
+  "/database/pgsql/": [
+    {
+      text: "PgSQL学习",
+      icon: "book",
+      prefix: "learning/",
+      link: "",
+      children: "structure",
+    },
+    {
+      text: "PgSQL实践",
+      icon: "book",
+      prefix: "use/",
+      link: "",
+      children: "structure",
+    },
+  ]
 });

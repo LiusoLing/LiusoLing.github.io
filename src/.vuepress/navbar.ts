@@ -7,8 +7,19 @@ export default navbar([
   {
     text: "数据库",
     icon: "pen-to-square",
-    prefix: "/posts/",
-    children: []
+    prefix: "/database/",
+    children: [
+      {
+        text: "教程",
+        icon: "signs-post",
+        prefix: "",
+        children: ["mysql/", "pgsql/"],
+      },
+      // {
+      //   text: "项目",
+      //   children: ["changelog", "migration/", "related", "contribution"],
+      // },
+    ],
   },
   {
     text: "轮子工具",
