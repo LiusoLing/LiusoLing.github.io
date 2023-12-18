@@ -79,7 +79,7 @@ Mybatis Plus 有一个很方便的注解 `@EnumValue`，该注解用在枚举类
 
 `debug` 时发现问题出现在 `MybatisEnumTypeHandler` 类中，`getNullableResult` 方法的第一行，`ResultSet.getObject` 方法返回的是 0 而不是 null：
 
-![MybatisEnumTypeHandler](/assets/images/base/enumvalue-problem.bmp)
+![MybatisEnumTypeHandler](/assets/images/base/enumvalue-problem.jpg)
 
 看代码就能见名知义，`ResultSet.getObject(columnName, this.propertyType)` ==根据列名和数据库表列字段类型，获取到数据库列的值。==
 
@@ -91,7 +91,7 @@ Mybatis Plus 有一个很方便的注解 `@EnumValue`，该注解用在枚举类
 
 [使用枚举映射时, 如果数据库为null, 返回的是0值的枚举对象 #5266](https://github.com/baomidou/mybatis-plus/issues/5266)
 
-![官方issue解决](/assets/images/base/enumvalue-solve.bmp)
+![官方issue解决](/assets/images/base/enumvalue-solve.jpg)
 
 所以最终通过将 `pom.xml` 中的 `mysql-connector-java` 驱动版本升级为 `8.0.33` 解决了该问题。
 
