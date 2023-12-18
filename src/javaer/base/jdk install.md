@@ -1,6 +1,6 @@
 ---
 # 这是文章的标题
-title: 准备-安装JDK
+title: JDK Install
 # 你可以自定义封面图片
 # cover: /assets/images/cover1.jpg
 # 这是页面的图标
