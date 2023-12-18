@@ -49,6 +49,13 @@ export default sidebar({
       link: "",
       children: "structure",
     },
+    {
+      text: "Mybatis Plus",
+      icon: "book",
+      prefix: "mybatis plus/",
+      link: "",
+      children: "structure",
+    },
   ],
 
   "/database/pgsql/": [
