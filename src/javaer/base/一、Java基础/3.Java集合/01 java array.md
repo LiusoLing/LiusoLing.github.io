@@ -1,12 +1,12 @@
 ---
 # 这是文章的标题
-title: 07. Java数组
+title: 01. Java数组
 # 你可以自定义封面图片
 # cover: /assets/images/cover1.jpg
 # 这是页面的图标
 icon: pen-to-square
 # 这是侧边栏的顺序
-order: 8
+order: 1
 # 设置作者
 author: LiuSongLing
 # 设置写作时间
