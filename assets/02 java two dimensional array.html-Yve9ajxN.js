@@ -1,0 +1,1 @@
+import{_ as e}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as a,c as o,e as r}from"./app-c0qboIoH.js";const t={};function _(n,c){return a(),o("div",null,[r(" more ")])}const l=e(t,[["render",_],["__file","02 java two dimensional array.html.vue"]]);export{l as default};
