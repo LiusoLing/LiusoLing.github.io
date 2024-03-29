@@ -241,10 +241,10 @@ public class Application {
 
 我们可以看到输出，每次将对象存储在哈希映射中并使用containsKey()方法检查时，都会调用hashCode()，并将计算的哈希代码打印到控制台：
 ```java
-[main] INFO com.baeldung.entities.User - hashCode() called - Computed hash: 1255477819
-[main] INFO com.baeldung.entities.User - hashCode() called - Computed hash: -282948472
-[main] INFO com.baeldung.entities.User - hashCode() called - Computed hash: -1540702691
-[main] INFO com.baeldung.entities.User - hashCode() called - Computed hash: 1255477819
+[main] INFO com.sky.entities.User - hashCode() called - Computed hash: 1255477819
+[main] INFO com.sky.entities.User - hashCode() called - Computed hash: -282948472
+[main] INFO com.sky.entities.User - hashCode() called - Computed hash: -1540702691
+[main] INFO com.sky.entities.User - hashCode() called - Computed hash: 1255477819
 User found in the collection
 ```
 
