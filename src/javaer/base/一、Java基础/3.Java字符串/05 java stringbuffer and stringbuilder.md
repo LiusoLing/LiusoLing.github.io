@@ -1,6 +1,6 @@
 ---
 # 这是文章的标题
-title: 05. Java的StringBuilder和StringBuffer
+title: 05. Java的StringBuffer
 # 你可以自定义封面图片
 # cover: /assets/images/cover1.jpg
 # 这是页面的图标
