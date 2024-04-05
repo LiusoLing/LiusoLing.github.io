@@ -1,12 +1,12 @@
 ---
 # 这是文章的标题
-title: 06. Java流程控制
+title: 05. for循环
 # 你可以自定义封面图片
 # cover: /assets/images/cover1.jpg
 # 这是页面的图标
 icon: pen-to-square
 # 这是侧边栏的顺序
-order: 7
+order: 5
 # 设置作者
 author: LiuSongLing
 # 设置写作时间
@@ -27,172 +27,30 @@ star: false
 # copyright: MIT
 ---
 
-在Java编程中，流程控制通过条件语句来执行，条件语句是根据条件来执行特定分支的代码。
-
-在Java语言中有两种条件语句，if语句和switch语句。
+学习 Java语言的一个核心方面——使用循环重复执行语句或一组语句。
 
 <!-- more -->
 
-## if语句
+## 1.循环简介
 
-### 1.if格式
-```java
-if(布尔表达式) {  
-    // 如果布尔表达式的结果为 true，则执行这块代码
-}
-```
+在编程语言中，**循环是一种功能，可以促进一组指令的执行，直到控制布尔表达式求值为false。**
 
-写个示例：
-```java
-int age = 20;
-if (age < 30) {
-    System.out.println("年轻人");
-}
-```
+Java提供不同类型的循环，以满足任何编程需求。每个循环都有自己的目的和合适的用例。
 
-输出：
-```java
-年轻人
-```
+以下是我们可以在Java中找到的循环类型：
 
-::: tip
-if 可以嵌套使用，例如：
-```java
-if(外侧条件) {    
-     // 外侧条件为 true 时执行的代码 
-    if(内侧条件) {  
-        // 内侧条件为 true 时执行的代码
-    }    
-}  
-```
-:::
-
-### 2.if-else格式
-```java
-if(布尔表达式) {  
-    // 如果布尔表达式的结果为 true 时执行的代码块
-} else {  
-    // 如果布尔表达式的结果为 false  时执行的代码块
-} 
-```
-
-写个示例：
-```java
-int age = 31;
-if (age < 30) {
-    System.out.println("年轻人");
-} else {
-    System.out.println("中年人");
-}
-```
-
-输出：
-```java
-中年人
-```
-
-::: tip
-如果执行语句比较简单的话，可以使用三元运算符来代替 if-else 语句
-```java
-int age = 31;
-String result = age < 30 ? "年轻人" : "中年人";
-System.out.println(result);
-```
-:::
-
-### 3.if-else-if格式
-```java
-if(条件1) {  
-    // 条件1 为 true 时执行的代码
-}  else if(条件2) {  
-    // 条件2 为 true 时执行的代码
-}  else if(条件3) {  
-    // 条件3 为 true 时执行的代码
-}  
-...  
-else{  
-    // 以上条件全为 false 时执行的代码
-} 
-```
-
-写个示例：
-```java
-int age = 41;
-if (age < 30) {
-    System.out.println("年轻人");
-} else if (age >= 30 && age < 40 ) {
-    System.out.println("中年人");
-} else if (age >= 40 && age < 50 ) {
-    System.out.println("退休的");
-} else {
-    System.out.println("老年人");
-}
-```
-
-输出：
-```java
-退休的
-```
+- for-i 循环
+- for-each 循环
+- while 循环
+- do-while 循环
 
 
-## switch语句
+## 2.for循环
 
-switch 语句用来判断变量与多个值之间的相等性。
+### 2.1 普通for循环
 
-变量的类型可以是 byte、short、int 或者 char，或者对应的包装器类型 Byte、Short、Integer、Character，外加 String 、Enum类型。
-```java
-switch(变量) {    
-    case 可选值1:    
-        xxx // 可选值1匹配后执行的代码;    
-        break;  // 该关键字是可选项，用于中断执行
-    case 可选值2:    
-        yyy // 可选值2匹配后执行的代码;    
-        break;  // 该关键字是可选项
-
-    ......
-
-    default: // 该关键字是可选项     
-    // 所有可选值都不匹配后执行的代码 
-}
-```
-
-写个示例：
-```java
-int age = 24;
-switch (age) {
-    case 18 :
-        System.out.println("年轻人");
-        break;
-    case 24 :
-        System.out.println("成年人");
-        break;
-    case 30 :
-        System.out.println("中年人");
-        break;
-    default:
-        System.out.println("不知道什么人");
-        break; // 可省略
-}
-```
-
-输出：
-```java
-成年人
-```
-
-::: warning
-
-break 是可选的，如果case 没有 break，它将往下一直执行下一个case，直到有break，然后跳出。
-
-case 的判断值必须唯一。
-
-用于判断的变量值 和 case 后的常量值 类型必须保持一致。
-:::
-
-## for循环
-
-### 1.普通for循环
 看下代码格式：
+
 ```java
 for(初始变量; 条件; 自增/自减) {  
     // 循环体
@@ -200,12 +58,17 @@ for(初始变量; 条件; 自增/自减) {
 ```
 
 每个部分解释如下：
+
  - **初始变量：** 循环开始执行时的初始条件；
  - **条件：** 循环每次执行时要判断的条件，为 true 执行循环体，为 false，就跳出循环。条件可选，当没有条件时，则会一直循环；
  - **自增/自减：** 初始变量变化的方式；
  - **循环体：** 循环每次要执行的代码块，直到条件变为 false。
 
+
+<br/><br/><br/><br/><br/><br/>
+
 写个示例：
+
 ```java
 for (int i = 0; i < 5; i++) {
     System.out.println("循环第" + i + "次");
@@ -233,7 +96,10 @@ for循环可嵌套，有一些约定俗成的规范需要遵循：
 7. 注意循环顺序： 注意内外循环的顺序，一般将循环次数少的放外层。
 :::
 
-### 2.for-each循环
+
+<br/><br/><br/><br/><br/><br/>
+
+### 2.2 for-each循环
 
 for-each循环是语法糖，一般用于遍历数组和集合，代码格式如下：
 ```java
@@ -257,7 +123,10 @@ for (String str : strs) {
 张三
 ```
 
-### 3.无限for循环
+
+<br/><br/><br/><br/><br/><br/>
+
+### 2.3 无限for循环
 
 无限for循环也称死循环，如下所示：
 ```java
@@ -268,7 +137,7 @@ for(;;){
 
 除非强制停止，一旦运行，停不下来。
 
-### 4.continue跳过for循环
+### 2.4 continue跳过for循环
 
 当需要在 for 循环、while 循环或者 do-while 循环中，立即跳转到下一个循环时，可以使用 continue 关键字。
 
@@ -285,6 +154,9 @@ for (int i = 1; i <= 3; i++) {
 }
 ```
 
+
+<br/><br/><br/><br/><br/><br/>
+
 输出：
 
 ```java
@@ -294,7 +166,7 @@ for (int i = 1; i <= 3; i++) {
 
 while 和 do-while 循环不再举例，使用方法和 上面的例子一致。
 
-### 5.break中断for循环
+### 2.5 break中断for循环
 
 break 关键字通常用于中断循环或 switch 语句，它可用于所有类型循环语句，如for、while、do-while、switch等。
 
@@ -318,9 +190,9 @@ for (int i = 1; i <= 3; i++) {
 ```
 
 
-## while循环
+## 3.while循环
 
-### 1.普通while循环
+### 3.1 普通while循环
 
 while循环的代码格式如下：
 
@@ -353,6 +225,9 @@ while循环
 while循环
 ```
 
+
+<br/><br/><br/><br/><br/><br/>
+
 ::: warning
 
 while 中的条件为true，且循环体中没有 break时，将导致死循环，程序一旦运行，就停不下来。
@@ -364,7 +239,7 @@ while (true) {
 ```
 :::
 
-### 2.do-while循环
+### 3.2 do-while循环
 
 do-while的代码格式如下：
 
@@ -397,6 +272,9 @@ do-while循环
 do-while循环
 do-while循环
 ```
+
+
+<br/><br/><br/><br/><br/><br/>
 
 do-while 循环，由于将循环体放在判断条件前面，所以无论 while 中的判断条件 是 true 还是 false，都==至少会执行一次循环体==。
 
