@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b959bf1a-04ac-4312-94d5-8652fdd6dd98" name="更改" comment="feat: unix程序员须知指南">
-      <change afterPath="$PROJECT_DIR$/src/javaer/base/Java基础/1 base grammar.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/javaer/base/java history.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/javaer/base/jdk install.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaer/base/1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaer/base/2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaer/base/3.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaer/base/4.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaer/base/test/t1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/javaer/unix.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaer/unix.md" afterDir="false" />
-    </list>
+    <list default="true" id="b959bf1a-04ac-4312-94d5-8652fdd6dd98" name="更改" comment="feat: unix程序员须知指南" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,6 +42,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -68,7 +61,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/liusongling/ideaPro/sky-docs&quot;
+    &quot;last_opened_file_path&quot;: &quot;/Users/liusongling/ideaPro/LiusoLing.github.io&quot;
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
@@ -90,6 +83,17 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: unix程序员须知指南" />
