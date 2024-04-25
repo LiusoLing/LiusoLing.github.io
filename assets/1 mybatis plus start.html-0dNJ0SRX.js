@@ -1,1 +1,0 @@
-import{_ as e}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as t,c as s,e as a,a as o}from"./app-c0qboIoH.js";const r={},_=o("p",null,"Mybatis Plus 入门教程。",-1);function c(l,n){return t(),s("div",null,[_,a(" more ")])}const u=e(r,[["render",c],["__file","1 mybatis plus start.html.vue"]]);export{u as default};
