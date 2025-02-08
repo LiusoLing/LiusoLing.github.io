@@ -28,22 +28,21 @@ star: false
 # copyright: MIT
 ---
 
-在本教程中，我们将深入研究Java语言的一个核心概念——数组。
+在本教程中，我们将深入研究 Java 语言的一个核心概念——数组。
 
 <!-- more -->
 
-
 ## 1.什么是数组
 
-首先，我们需要定义什么是数组？根据Java文档，**数组是包含固定数量的相同类型值的对象。**
+首先，我们需要定义什么是数组？根据 Java 文档，**数组是包含固定数量的相同类型值的对象。**
 
 数组的元素是索引的，这意味着我们可以用数字（称为索引）访问它们。
 
-我们可以将数组视为Excel单元格的编号列表，每个单元格都是一个包含值的变量。在Java中，编号从0开始。
+我们可以将数组视为 Excel 单元格的编号列表，每个单元格都是一个包含值的变量。在 Java 中，编号从 0 开始。
 
-有原始类型数组和对象类型数组。这意味着我们可以使用int、float、boolean...的数组，也可以使用String、Object和自定义类型的数组。
+有原始类型数组和对象类型数组。这意味着我们可以使用 int、float、boolean...的数组，也可以使用 String、Object 和自定义类型的数组。
 
-以下是一个简化的数组UML类图，通过它，我们可以看出类之间的关系：
+以下是一个简化的数组 UML 类图，通过它，我们可以看出类之间的关系：
 
 ```class
 Object <|-- Cloneable
@@ -105,25 +104,23 @@ class Serializable {
 
 让我们先进行声明和初始化。
 
-
-
 <br/><br/><br/><br/>
-
 
 ### 2.1 声明数组
 
-我们将从声明开始。在Java中声明数组有两种方法：
+我们将从声明开始。在 Java 中声明数组有两种方法：
 
 ```java
 int[] anArray;
 ```
 
 或者：
+
 ```java
 int anOtherArray[];
 ```
-**前者比后者使用得更广泛。**
 
+**前者比后者使用得更广泛。**
 
 ### 2.2 初始化
 
@@ -135,28 +132,26 @@ int anOtherArray[];
 int[] anArray = new int[10];
 ```
 
-通过使用这种方法，我们初始化了一个由十个int元素组成的数组。请注意，我们需要指定数组的大小。
+通过使用这种方法，我们初始化了一个由十个 int 元素组成的数组。请注意，我们需要指定数组的大小。
 
-使用此方法时，**我们将每个元素初始化为其默认值，此处为0。初始化Object数组时，元素默认为null**。
+使用此方法时，**我们将每个元素初始化为其默认值，此处为 0。初始化 Object 数组时，元素默认为 null**。
 
 我们现在将看到另一种方法，让我们有可能在创建数组时直接为数组设置值：
-
 
 ```java
 int[] anArray = new int[] {1, 2, 3, 4, 5};
 ```
 
-在这里，我们初始化了一个包含数字1到5的五个元素数组。使用此方法时，我们不需要指定数组的长度，而是在大括号之间直接声明的元素数。
-
-
-
+在这里，我们初始化了一个包含数字 1 到 5 的五个元素数组。使用此方法时，我们不需要指定数组的长度，而是在大括号之间直接声明的元素数。
 
 <br/><br/><br/><br/>
 
 ## 3.数组的长度
+
 **数组的长度表示数组中的元素数，创建后，长度是固定的，无法更改。**
 
 Java 提供了可用于确定数组长度的内置属性 length。此属性适用于所有数组类型，返回数组中的元素数：
+
 ```java
 int[] anArray = new int[] { 1, 2, 3, 4, 5 };
 System.out.println("anArray's length: " + anArray.length);
@@ -164,7 +159,8 @@ System.out.println("anArray's length: " + anArray.length);
 anArray's length: 5
 ```
 
-除了使用 length 属性来确定数组的大小外，我们还可以使用 java.lang.reflect.Array 类中的 Array.getLength（） 方法： 
+除了使用 length 属性来确定数组的大小外，我们还可以使用 java.lang.reflect.Array 类中的 Array.getLength（） 方法：
+
 ```java
 System.out.println("[Array.getLength()] anArray's length: " + Array.getLength(anArray));
 ```
@@ -172,22 +168,22 @@ System.out.println("[Array.getLength()] anArray's length: " + Array.getLength(an
 Array.getLength（） 接受 Object type 中的参数。它在通用或反射上下文中处理数组的情况下很有用，例如当我们在编译时没有数组类型时。
 
 看个例子：
+
 ```java
 Object arrayAsObj = anArray;
 System.out.println("the array Object (anArray) 's length: " + Array.getLength(arrayAsObj));
 
 //output:
-the array Object (anArray) 's length: 5 
-``` 
+the array Object (anArray) 's length: 5
+```
 
 **Array.getLength（） 允许我们确定任何数组对象的长度，而无需将其转换为特定类型。**
-
 
 ## 4.访问元素
 
 现在让我们看看如何访问数组的元素。我们可以通过要求数组的索引位置来实现这一点。
 
-例如，这个小代码片段将打印10到控制台：
+例如，这个小代码片段将打印 10 到控制台：
 
 ```java
 anArray[0] = 10;
@@ -196,17 +192,16 @@ System.out.println(anArray[0]);
 
 注意我们如何使用 index 来访问数组单元。**括号之间的数字是我们想要访问的数组的特定位置**。
 
-访问单元格时，如果传递的索引为负数或超过最后一个单元格，Java将抛出 `ArrayIndexOutOfBoundException`。
+访问单元格时，如果传递的索引为负数或超过最后一个单元格，Java 将抛出 `ArrayIndexOutOfBoundException`。
 
 所以我们应该小心，**不要使用负索引，或大于或等于数组大小的索引访问元素**。
-
 
 ## 4.迭代数组
 
 逐个访问元素可能很有用，但我们可能想通过数组进行遍历。让我们看看如何做到这一点。
 <br/><br/><br/><br/>
 
-第一种方法是使用for循环：
+第一种方法是使用 for 循环：
 
 ```java
 int[] anArray = new int[] {1, 2, 3, 4, 5};
@@ -215,9 +210,9 @@ for (int i = 0; i < anArray.length; i++) {
 }
 ```
 
-这应该将数字1到5打印到控制台。正如我们所看到的，我们利用了**长度属性。这是一个公共属性，给我们数组的大小**。
+这应该将数字 1 到 5 打印到控制台。正如我们所看到的，我们利用了**长度属性。这是一个公共属性，给我们数组的大小**。
 
-当然，可以使用其他循环机制，如while或do while。但是，对于Java集合，可以使用foreach循环在数组上循环：
+当然，可以使用其他循环机制，如 while 或 do while。但是，对于 Java 集合，可以使用 foreach 循环在数组上循环：
 
 ```java
 int[] anArray = new int[] {1, 2, 3, 4, 5};
@@ -225,13 +220,12 @@ for (int element : anArray) {
     System.out.println(element);
 }
 ```
-这是for的增强语法糖，适用于不需要修改数组、不需要index来做其他事情的情况。
 
+这是 for 的增强语法糖，适用于不需要修改数组、不需要 index 来做其他事情的情况。
 
 ## 5.变量
 
-Java源码中有 varargs 用于将任意数量的参数传递给方法这样的用法：
-
+Java 源码中有 varargs 用于将任意数量的参数传递给方法这样的用法：
 
 ```java
 void varargsMethod(String... varargs) {}
@@ -245,7 +239,6 @@ void varargsMethod(String... varargs) {}
 String[] anArray = new String[] {"Milk", "Tomato", "Chips"};
 varargsMethod(anArray);
 ```
-
 
 ## 6.将数组转为集合
 
@@ -263,19 +256,20 @@ for (int element : anArray) {
 ```
 
 但是还有另一种更简洁的方法：
+
 ```java
 Integer[] anArray = new Integer[] {1, 2, 3, 4, 5};
 List<Integer> aList = Arrays.asList(anArray);
 ```
 
 静态方法 Arrays.asList 采用 varargs 参数，并使用传递的值创建一个列表。不过这种方法有一些缺点：
+
 - 不能使用基本数据类型的数组
 - 不能在创建的列表中添加或删除元素，会抛出 UnsupportedOerationException
 
-
 ## 7.数组到流
 
-从Java8开始，数组可以使用 stream API，Java提供了相关方法：
+从 Java8 开始，数组可以使用 stream API，Java 提供了相关方法：
 
 ```java
 String[] anArray = new String[] {"Milk", "Tomato", "Chips"};
@@ -283,27 +277,27 @@ Stream<String> aStream = Arrays.stream(anArray);
 Stream<String> subStream = Arrays.stream(anArray, 1, 3);
 ```
 
-当把Object数组传递给该方法时，它将返回匹配类型的 stream。
+当把 Object 数组传递给该方法时，它将返回匹配类型的 stream。
 
 ## 8.数组排序
 
 如何对数组进行排序，即按照特定顺序重新排列其元素。
 
-**Arrays类为我们提供了 sort 方法。**
+**Arrays 类为我们提供了 sort 方法。**
 
 ```java
 int[] anArray = new int[] {5, 2, 1, 4, 8};
 Arrays.sort(anArray); // anArray is now {1, 2, 4, 5, 8}
 
 String[] yetAnotherArray = new String[] {"A", "E", "Z", "B", "C"};
-Arrays.sort(yetAnotherArray, 1, 3, 
+Arrays.sort(yetAnotherArray, 1, 3,
   Comparator.comparing(String::toString).reversed()); // yetAnotherArray is now {"A", "Z", "E", "B", "C"}
 ```
-
 
 ## 9.在数组中搜索
 
 搜素数组最简单的方法，就是遍历数组并在数组元素中搜索要找的元素：
+
 ```java
 int[] anArray = new int[] {5, 2, 1, 4, 8};
 for (int i = 0; i < anArray.length; i++) {
@@ -316,7 +310,7 @@ for (int i = 0; i < anArray.length; i++) {
 
 如果是一个有序的排序数组，我们可以使用另一种搜索方式，二叉搜索。
 
-不过，Java提供了现成的API可以使用，我们可以利用 **Arrays.binarySearch 方法**
+不过，Java 提供了现成的 API 可以使用，我们可以利用 **Arrays.binarySearch 方法**
 
 让我们看一个二分搜索方法用法的示例：
 

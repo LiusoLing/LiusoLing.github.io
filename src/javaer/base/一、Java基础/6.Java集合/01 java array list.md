@@ -39,10 +39,10 @@ ArrayList 是一个构建在数组之上的 List 实现，它可以在我们 添
 
 ## 1.创建 ArrayList
 
-首先, ArrayList<E> 是一个泛型类;因此，我们可以用我们想要的任何类型的方式来参数化它。
+首先, `ArrayList<E>` 是一个泛型类;因此，我们可以用我们想要的任何类型的方式来参数化它。
 编译器检查我们不能使用不兼容的类型。例如，我们不能将 Integer 值放在 String 集合中。对此，从集合中检索元素时，我们不需要强制转换元素。
 
-我们应该使用通用接口 List<E> 作为变量类型作为最佳实践，因为它将其与任何特定实现分离。
+我们应该使用通用接口 `List<E>` 作为变量类型作为最佳实践，因为它将其与任何特定实现分离。
 
 大部分情况下，默认使用无参构造函数创建空的 ArrayList 实例：
 
@@ -206,13 +206,13 @@ while (it.hasNext()) {
 
 ## 7.其他方法
 
-我们可以使用排序集合添加、获取和删除 ArrayList 中的第一个或最后一个元素。在 Java 21 中引入了序列化集合，并引入了新的 java.util.SequencedCollection<E> 接口。
+我们可以使用排序集合添加、获取和删除 ArrayList 中的第一个或最后一个元素。在 Java 21 中引入了序列化集合，并引入了新的 `java.util.SequencedCollection<E>`接口。
 
 已排序的集合具有其元素的明确定义的遭遇顺序。因此，元素具有线性排列：第一个元素、第二个元素、...和最后一个元素。
 
-将 java.util.Collection<E> 作为集合层次结构中的根接口，java.util.SequencedCollection<E> 对其进行扩展，以便为集合的元素提供顺序排列。
+将 `java.util.Collection<E>` 作为集合层次结构中的根接口，`java.util.SequencedCollection<E>` 对其进行扩展，以便为集合的元素提供顺序排列。
 
-java.util.SequencedCollection<E> 接口提供了几种方法来添加/获取/删除序列中第一个或最后一个元素：
+`java.util.SequencedCollection<E>` 接口提供了几种方法来添加/获取/删除序列中第一个或最后一个元素：
 
 | 类型          | 大小（位）               |
 | ------------- | ------------------------ |
