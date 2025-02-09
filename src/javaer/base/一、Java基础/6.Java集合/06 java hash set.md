@@ -6,7 +6,7 @@ title: 06. HashSet
 # 这是页面的图标
 icon: pen-to-square
 # 这是侧边栏的顺序
-order: 5
+order: 6
 # 设置作者
 author: LiuSongLing
 # 设置写作时间
