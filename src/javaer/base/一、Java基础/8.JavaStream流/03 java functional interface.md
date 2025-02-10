@@ -53,7 +53,7 @@ Java 8 在 `java.util.function` 包中提供了40+个预定义函数式接口，
 ### 1. Predicate（断言型接口）
 - **功能**：条件判断（返回布尔值）
 - **方法**：`test(T t)`
-- **链式操作**：`and()`, `or()`, `negate()`
+- **链式操作**：`and()`， `or()`， `negate()`
 
 ```java
 Predicate<String> isLong = s -> s.length() > 5;
@@ -63,13 +63,13 @@ System.out.println(isLong.test("HelloWorld")); // 输出：true
 ### 2. Function（函数型接口）
 - **功能**：类型转换（输入T类型，返回R类型）
 - **方法**：`apply(T t)`
-- **链式操作**：`compose()`, `andThen()`
+- **链式操作**：`compose()`， `andThen()`
 
 ```java
-Function<Integer, String> intToString = Object::toString;
-Function<String, String> quote = s -> "'" + s + "'";
+Function<Integer， String> intToString = Object::toString;
+Function<String， String> quote = s -> "'" + s + "'";
 
-Function<Integer, String> quoteInt = quote.compose(intToString);
+Function<Integer， String> quoteInt = quote.compose(intToString);
 System.out.println(quoteInt.apply(42)); // 输出：'42'
 ```
 
@@ -102,7 +102,7 @@ printer.accept("Hello Functional World!");
 - **BinaryOperator**：双参数同类型操作
   ```java
   BinaryOperator<Integer> sum = Integer::sum;
-  System.out.println(sum.apply(10, 20)); // 输出：30
+  System.out.println(sum.apply(10， 20)); // 输出：30
   ```
 
 ---
@@ -113,7 +113,7 @@ printer.accept("Hello Functional World!");
 | 通用接口        | 原始类型特化         |
 |----------------|---------------------|
 | `Predicate<T>` | `IntPredicate`      |
-| `Function<T,R>`| `IntToDoubleFunction`|
+| `Function<T，R>`| `IntToDoubleFunction`|
 | `Consumer<T>`  | `LongConsumer`      |
 
 ```java
@@ -126,14 +126,14 @@ System.out.println(even.test(100)); // 输出：true（避免Integer装箱）
 ## 双参数接口
 处理需要两个参数的场景：
 
-- **BiPredicate<T,U>**
-- **BiFunction<T,U,R>**
-- **BiConsumer<T,U>**
+- **BiPredicate<T，U>**
+- **BiFunction<T，U，R>**
+- **BiConsumer<T，U>**
 
 ```java
-BiFunction<String, Integer, String> padLeft = 
-    (str, num) -> String.format("%" + num + "s", str);
-System.out.println(padLeft.apply("Java", 10)); // 输出："      Java"
+BiFunction<String， Integer， String> padLeft = 
+    (str， num) -> String.format("%" + num + "s"， str);
+System.out.println(padLeft.apply("Java"， 10)); // 输出："      Java"
 ```
 
 ---
@@ -148,6 +148,7 @@ System.out.println(padLeft.apply("Java", 10)); // 输出："      Java"
 
 ## 总结
 Java 8 函数式接口为开发者提供了标准化的函数式编程工具集，配合Lambda表达式可实现：
+
 ✅ 更简洁的代码结构  
 ✅ 更强的类型安全  
 ✅ 更好的并行处理支持

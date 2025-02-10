@@ -28,7 +28,9 @@ star: false
 # copyright: MIT
 ---
 
-Java 8 引入的Stream API彻底改变了集合数据处理方式，其中`filter()`方法凭借**高达83%**的开发使用率成为最常用的操作之一。本文将深入剖析如何通过Lambda表达式高效使用`filter()`方法，并分享生产环境中的最佳实践。
+Java 8 引入的Stream API彻底改变了集合数据处理方式，其中`filter()`方法凭借**高达83%**的开发使用率成为最常用的操作之一。
+
+本文将深入剖析如何通过Lambda表达式高效使用`filter()`方法，并分享生产环境中的最佳实践。
 
 <!-- more -->
 
@@ -43,7 +45,7 @@ Stream<T> filter(Predicate<? super T> predicate)
 
 ### 基础示例
 ```java
-List<String> languages = Arrays.asList("Java", "Python", "", "Kotlin", "  ");
+List<String> languages = Arrays.asList("Java"， "Python"， ""， "Kotlin"， "  ");
 
 // 过滤非空字符串（包含空白字符串检查）
 List<String> validLanguages = languages.stream()
@@ -51,7 +53,7 @@ List<String> validLanguages = languages.stream()
         .collect(Collectors.toList());
 
 System.out.println(validLanguages); 
-// 输出: [Java, Python, Kotlin]
+// 输出: [Java， Python， Kotlin]
 ```
 
 ---
@@ -96,7 +98,7 @@ List<Employee> seniorDevs = employees.stream()
 
 ### 1.空值安全处理
 ```java
-List<String> dataWithNulls = Arrays.asList("apple", null, "orange");
+List<String> dataWithNulls = Arrays.asList("apple"， null， "orange");
 
 // 方案1：先过滤null再处理
 List<String> validData = dataWithNulls.stream()
@@ -133,7 +135,7 @@ dataWithNulls.stream()
 ### 3.调试技巧
 使用`peek()`观察过滤过程：
 ```java
-List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+List<Integer> numbers = Arrays.asList(1， 2， 3， 4， 5);
 
 List<Integer> evenNumbers = numbers.stream()
         .peek(n -> System.out.println("原始值: " + n))
@@ -185,6 +187,7 @@ long invalidCount = dataList.stream()
 
 ## 总结
 `filter()` + Lambda组合拳可实现：
+
 ✅ **声明式编程**：代码更贴近业务描述  
 ✅ **高效过滤**：平均提升集合处理速度40%  
 ✅ **灵活组合**：与Stream API无缝衔接  
